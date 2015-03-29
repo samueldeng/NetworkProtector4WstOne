@@ -2,14 +2,14 @@ from scapy.all import *
 from time import sleep
 
 IFACE = 'eth0'
-CAPPKT = 100
-SLEEP_INTER = 1  # count for seconds.
+CAPPKT = 20
+SLEEP_INTER = 3  # count for seconds.
 count = {}
 
 
 def sendICMP(ip_dst, ether_dst, ip_src, ether_src):
     print "***************************************************"
-    print "Detecting a FLOOD from anywhere to " + ip_src
+    print "Detecting a FLOOD from anywhere to IP from: " + ip_src + "  MAC from:" + ether_src
     print "sending a icmp from " + ip_src
     icmpFuckU = Ether(src=ether_dst, dst="ff:ff:ff:ff:ff:ff") / IP(src=str(ip_dst), dst='202.117.15.83') / ICMP()
     # icmpFuckU.show()
@@ -48,7 +48,7 @@ def main():
     print "##############Scan Result#####################"
     print "\n"
     for (k, v) in count.items():
-        if v > CAPPKT * 0.9:
+        if v >= CAPPKT * 0.7:
             sendICMP(k[1], k[3], k[0], k[2])
 
 
