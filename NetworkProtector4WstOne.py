@@ -12,6 +12,7 @@ logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S
                     level=logging.INFO)
 count = {}
 
+
 def process_args(argv):
     username = pwd.getpwuid(os.getuid())[0]
     interface = 'eth0'
