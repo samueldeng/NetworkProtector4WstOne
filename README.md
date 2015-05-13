@@ -25,8 +25,11 @@ for Ubuntu 14.04 (12.04?)
     by default, it will produce the log file named ip.log. Just like these:
 
  `05/13/2015 09:24:40 PM ip_src: 202.117.48.145	mac_src: 00:22:55:6e:f6:c0`
+
  `05/13/2015 09:24:40 PM ip_src: 202.117.48.145	mac_src: 00:22:55:6e:f6:c0`
+
  `05/13/2015 09:24:55 PM ip_src: 202.117.15.92	mac_src: 8c:89:a5:39:dc:c9`
+
  `05/13/2015 09:24:58 PM ip_src: 202.117.15.121	mac_src: 74:d4:35:45:20:31`
 
 
